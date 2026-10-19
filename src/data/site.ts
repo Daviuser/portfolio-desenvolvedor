@@ -1,24 +1,29 @@
 // Edite aqui: nome, textos, contatos e tecnologias. Nada além deste arquivo precisa mudar.
 export const site = {
-  name: "Seu Nome", // TODO: coloque seu nome
-  role: "Desenvolvedor web",
+  name: "Davi Santiago",
+  role: "Desenvolvedor Web",
+  url: "https://portfolio-desenvolvedor-psi.vercel.app",
+  repo: "https://github.com/Daviuser/portfolio-desenvolvedor",
   headline: "Transformando ideias em experiências digitais.",
   intro:
-    "Desenvolvo sites modernos e aplicações web que unem design, tecnologia e soluções para negócios.",
+    "Crio landing pages, sites profissionais e aplicações web modernos e responsivos, com atenção à experiência do usuário e à qualidade visual. Aberto a oportunidades de emprego em TI e a novos projetos.",
   description:
-    "Portfólio de desenvolvimento web: landing pages comerciais e aplicações web, com atenção ao design, à experiência do usuário e à funcionalidade.",
+    "Davi Santiago, desenvolvedor web: landing pages, sites profissionais e aplicações web responsivas. Veja os projetos publicados e entre em contato.",
 
   // Preencha somente com dados reais. Campos vazios não aparecem no site.
   contacts: {
-    whatsapp: "", // só dígitos com DDI e DDD. Ex.: 5571999999999
-    github: "", // URL completa. Ex.: https://github.com/seu-usuario
+    whatsapp: "5575987022496", // só dígitos com DDI e DDD
+    github: "https://github.com/Daviuser", // perfil pessoal
     linkedin: "", // URL completa
     email: "", // Ex.: contato@seudominio.com
   },
 
+  whatsappMessage: "Olá, Davi! Vi seu portfólio e gostaria de conversar sobre uma oportunidade profissional ou um projeto.",
+
   about: [
-    "Sou desenvolvedor web e gosto de transformar ideias em experiências digitais. Trabalho na criação de landing pages e aplicações web, buscando unir design, funcionalidade e uma boa experiência para o usuário.",
-    "Gosto de entender o negócio de quem vou atender, cuidar dos detalhes da interface e entregar projetos publicados e funcionando. Estou sempre aprendendo novas ferramentas para melhorar a qualidade do que construo.",
+    "Sou Davi Santiago, desenvolvedor web. Crio landing pages, sites profissionais e aplicações web com foco em interfaces modernas, responsivas e fáceis de usar.",
+    "Os projetos deste portfólio mostram esse trabalho na prática: sites para profissionais de saúde e bem-estar, uma página comercial para o segmento fitness e o Klivo, uma aplicação web para gestão de clínicas odontológicas. Em todos, cuido da organização visual, da funcionalidade e da experiência de quem acessa.",
+    "Tenho interesse em trabalhar com empresas, profissionais autônomos e pequenos negócios, e estou aberto a oportunidades de emprego na área de TI.",
   ],
   values: [
     { title: "Atenção aos detalhes", text: "Espaçamento, tipografia e microinterações pensados em cada projeto." },
@@ -32,3 +37,8 @@ export const site = {
     { group: "Ferramentas e publicação", items: ["Git", "GitHub", "Vercel", "VS Code"] },
   ],
 };
+
+// Link do WhatsApp com a mensagem inicial já codificada. Todos os botões usam este valor.
+export const whatsappUrl = site.contacts.whatsapp
+  ? `https://wa.me/${site.contacts.whatsapp}?text=${encodeURIComponent(site.whatsappMessage)}`
+  : "";

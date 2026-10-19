@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
-import { site } from "@/data/site";
+import { Menu, X, MessageCircle } from "lucide-react";
+import { site, whatsappUrl } from "@/data/site";
 
 const links = [
   { href: "#projetos", label: "Projetos" },
@@ -47,6 +47,18 @@ export default function Header() {
           ))}
         </nav>
 
+        {whatsappUrl && (
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden min-h-10 items-center gap-2 rounded-full bg-lime px-4 text-sm font-medium text-ink transition hover:bg-white active:scale-[.97] md:inline-flex"
+          >
+            <MessageCircle size={16} aria-hidden />
+            WhatsApp
+          </a>
+        )}
+
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
@@ -62,7 +74,7 @@ export default function Header() {
       <nav
         id="menu-mobile"
         aria-label="Menu mobile"
-        className={`grid overflow-hidden transition-[grid-template-rows,opacity] duration-300 md:hidden ${
+        className={`grid overflow-hidden transition-[grid-template-rows,opacity,visibility] duration-300 md:hidden ${
           open ? "grid-rows-[1fr] opacity-100" : "invisible grid-rows-[0fr] opacity-0"
         }`}
       >
@@ -74,6 +86,13 @@ export default function Header() {
               </a>
             </li>
           ))}
+          {whatsappUrl && (
+            <li>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="block border-t border-line py-4 font-display text-xl text-lime">
+                WhatsApp
+              </a>
+            </li>
+          )}
         </ul>
       </nav>
     </header>

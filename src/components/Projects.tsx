@@ -58,11 +58,13 @@ function Featured({ p }: { p: Project }) {
       <Shot p={p} priority sizes="(min-width:1024px) 640px, 100vw" />
       <div>
         <p className="inline-block rounded-full bg-lime px-3 py-1 text-xs font-semibold text-ink">Projeto principal</p>
-        <h3 className="mt-5 font-display text-4xl font-semibold tracking-tight sm:text-5xl">{p.name}</h3>
+        <h3 className="mt-5 font-display text-3xl font-semibold tracking-tight sm:text-4xl">{p.name}</h3>
         <p className="mt-2 text-sm text-lime">{p.category}</p>
         <p className="mt-5 leading-relaxed text-mute">{p.description}</p>
         {p.highlights && (
-          <ul className="mt-6 grid grid-cols-2 gap-x-4 gap-y-3 text-sm">
+          <>
+          <p className="mt-6 text-sm text-mute">Módulos apresentados na tela de acesso:</p>
+          <ul className="mt-3 grid grid-cols-2 gap-x-4 gap-y-3 text-sm">
             {p.highlights.map((h) => (
               <li key={h} className="flex items-start gap-2">
                 <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lime" aria-hidden />
@@ -70,6 +72,7 @@ function Featured({ p }: { p: Project }) {
               </li>
             ))}
           </ul>
+          </>
         )}
         <Tags items={p.tech} />
         <Visit p={p} className="mt-8" />

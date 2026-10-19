@@ -16,10 +16,10 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "klivo",
-    name: "Klivo",
-    category: "Sistema web / SaaS odontológico",
+    name: "Klivo — Sistema de gestão para clínicas odontológicas",
+    category: "Aplicação web / SaaS odontológico",
     description:
-      "Sistema de gestão para clínicas odontológicas, com acesso por e-mail e senha. A proposta reúne agenda, prontuário, odontograma e financeiro da clínica em um único lugar.",
+      "Aplicação web para gestão de clínicas odontológicas, com acesso por e-mail e senha. A proposta reúne agenda, prontuário, odontograma e financeiro da clínica em um único lugar.",
     url: "https://saas-klivo-clinica-odontologica-f6s.vercel.app/",
     image: "/images/projects/klivo-login.png",
     alt: "Tela de acesso do Klivo, sistema de gestão de clínicas odontológicas, com formulário de login e os módulos do sistema",
@@ -30,7 +30,7 @@ export const projects: Project[] = [
   {
     slug: "brain-and-body",
     name: "Brain and Body Consultoria",
-    category: "Landing page comercial, segmento fitness",
+    category: "Landing page comercial, treino personalizado",
     description:
       "Página comercial para consultoria de treino personalizado, com identidade escura e energética, navegação por seções (sobre, diferenciais, planos, como funciona e FAQ) e botão de contato por WhatsApp.",
     url: "https://brain-and-body-consultoria.vercel.app/",
@@ -63,9 +63,9 @@ export const projects: Project[] = [
   {
     slug: "espaco-psique",
     name: "Espaço Psique Psicologia",
-    category: "Landing page, psicologia",
+    category: "Site institucional, psicologia",
     description:
-      "Landing page de um espaço de psicologia construída a partir da logo em borboleta, com paleta verde-azulada e navegação por espaço, profissionais, atendimentos, ambiente e dúvidas.",
+      "Site institucional de um espaço de psicologia, com identidade construída a partir da logo em borboleta, com paleta verde-azulada e navegação por espaço, profissionais, atendimentos, ambiente e dúvidas.",
     url: "https://espaco-psique-psicologia.vercel.app/",
     image: "/images/projects/espaco-psique.png",
     alt: "Landing page do Espaço Psique Psicologia com logo de borboleta verde-azulada e título em serifa",

@@ -1,11 +1,11 @@
 import { Github, Linkedin, Mail, MessageCircle, type LucideIcon } from "lucide-react";
 import Reveal from "./Reveal";
-import { site } from "@/data/site";
+import { site, whatsappUrl } from "@/data/site";
 
 export default function Contact() {
   const c = site.contacts;
   const channels: { label: string; href: string; Icon: LucideIcon; external: boolean }[] = [];
-  if (c.whatsapp) channels.push({ label: "WhatsApp", href: `https://wa.me/${c.whatsapp.replace(/\D/g, "")}`, Icon: MessageCircle, external: true });
+  if (c.whatsapp) channels.push({ label: "WhatsApp", href: whatsappUrl, Icon: MessageCircle, external: true });
   if (c.email) channels.push({ label: "E-mail", href: `mailto:${c.email}`, Icon: Mail, external: false });
   if (c.linkedin) channels.push({ label: "LinkedIn", href: c.linkedin, Icon: Linkedin, external: true });
   if (c.github) channels.push({ label: "GitHub", href: c.github, Icon: Github, external: true });

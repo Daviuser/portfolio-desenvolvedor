@@ -8,7 +8,7 @@ const body = DM_Sans({ subsets: ["latin"], variable: "--font-body", display: "sw
 
 const baseUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "http://localhost:3000");
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : site.url);
 
 const title = `${site.name} | ${site.role}`;
 
