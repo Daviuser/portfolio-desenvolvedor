@@ -1,14 +1,14 @@
 // Edite aqui: textos, contatos, serviços, processo e tecnologias.
 export const site = {
   name: "Davi Santiago",
-  role: "Desenvolvedor Web",
+  role: "Web Developer",
   url: "https://portfolio-desenvolvedor-psi.vercel.app",
   repo: "https://github.com/Daviuser/portfolio-desenvolvedor",
-  headline: "Soluções digitais sob medida para o seu negócio.",
+  headline: "Ideias que ganham forma. Negócios que evoluem.",
   intro:
-    "Desenvolvo sites, landing pages e aplicações web personalizadas para empresas, profissionais e empreendedores que querem fortalecer a presença online e organizar seus processos.",
+    "Desenvolvo soluções digitais modernas e personalizadas para empresas, profissionais e empreendedores que desejam fortalecer sua presença online e transformar suas ideias em projetos reais.",
   description:
-    "Davi Santiago, desenvolvedor web independente: sites profissionais, landing pages e aplicações web personalizadas e responsivas. Veja os projetos publicados e peça um orçamento.",
+    "Davi Santiago, Web Developer: sites profissionais, aplicações web e sistemas personalizados. Conheça os projetos e converse sobre a sua ideia.",
 
   contacts: {
     whatsapp: "5575987022496", // só dígitos com DDI e DDD
@@ -16,11 +16,11 @@ export const site = {
     linkedin: "", // URL completa; vazio = oculto
     email: "", // vazio = oculto
   },
-  whatsappMessage: "Olá, Davi! Vi seu portfólio e gostaria de conversar sobre uma oportunidade profissional ou um projeto.",
+  whatsappMessage: "Olá! Conheci seu portfólio e gostaria de conversar sobre um projeto.",
 
   about: [
-    "Sou Davi Santiago, desenvolvedor web independente. Desenvolvo soluções digitais modernas e personalizadas para empresas, profissionais e empreendedores que desejam fortalecer a presença online, otimizar processos e expandir seus negócios.",
-    "Meu foco é unir design, tecnologia e funcionalidade para transformar ideias em projetos digitais eficientes, responsivos e alinhados às necessidades de cada cliente. Os projetos deste portfólio, de sites para profissionais de saúde a uma aplicação web de gestão, mostram como aplico essa abordagem na prática.",
+    "Desenvolvo soluções digitais com atenção ao design, à funcionalidade e às necessidades de cada negócio. Meu foco é transformar ideias em projetos modernos, responsivos e bem construídos, proporcionando uma experiência de qualidade em cada detalhe.",
+    "Os projetos deste portfólio, de sites para profissionais de saúde a uma aplicação web de gestão, mostram como aplico essa abordagem na prática.",
   ],
   values: [
     { title: "Design com propósito", text: "Interfaces organizadas e com identidade própria, pensadas para o público de cada projeto." },
@@ -39,8 +39,8 @@ export const site = {
     },
     {
       icon: "megaphone",
-      title: "Landing pages para divulgar serviços",
-      text: "Páginas focadas em apresentar um serviço e levar o visitante ao contato, com botões de WhatsApp e agendamento.",
+      title: "Experiências digitais para empresas e profissionais",
+      text: "Páginas pensadas para apresentar serviços e levar o visitante ao contato, com botões de WhatsApp e agendamento.",
       benefit: "Quem chega entende o que você faz e tem um caminho direto até você.",
       example: "catalina-reyes",
     },
@@ -53,17 +53,17 @@ export const site = {
     },
     {
       icon: "refresh",
-      title: "Modernização de interfaces",
+      title: "Modernização de interfaces e projetos existentes",
       text: "Atualização visual e de usabilidade de sites e sistemas que já existem.",
       benefit: "Aparência atual e navegação mais simples, sem recomeçar do zero.",
     },
   ],
 
   process: [
-    { title: "Conversa inicial", text: "Você conta a sua ideia e eu faço perguntas para entender a necessidade do negócio." },
-    { title: "Proposta e escopo", text: "Defino o que será feito e como, para que a gente tenha clareza antes de começar." },
+    { title: "Conversa inicial", text: "Entendo as necessidades do seu projeto e do seu negócio." },
+    { title: "Planejamento e proposta", text: "Planejo o escopo e defino a proposta, para termos clareza antes de começar." },
     { title: "Desenvolvimento e ajustes", text: "Construo o projeto com design e tecnologia, e ajustamos os detalhes juntos." },
-    { title: "Entrega", text: "O projeto é finalizado e publicado, pronto para uso." },
+    { title: "Entrega e publicação", text: "O projeto é entregue e publicado conforme o escopo acordado." },
   ],
 
   tech: [

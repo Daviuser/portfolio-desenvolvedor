@@ -78,7 +78,6 @@ function Highlight({ text }: { text?: string }) {
 function Featured({ p }: { p: Project }) {
   return (
     <article className="group relative grid gap-8 overflow-hidden rounded-3xl border border-line bg-panel p-4 sm:p-6 lg:grid-cols-[1.45fr_1fr] lg:items-center lg:gap-12 lg:p-10">
-      <div aria-hidden className="glow pointer-events-none absolute -left-24 -top-24 h-96 w-96" />
       <div className="relative">
         <Mock p={p} priority sizes="(min-width:1024px) 680px, 100vw" />
       </div>
@@ -135,12 +134,12 @@ export default function Projects() {
   return (
     <section id="projetos" className="mx-auto max-w-6xl px-5 py-24 sm:px-8">
       <RevealText
-        text="Projetos publicados, de landing pages a um sistema web."
+        text="Trabalhos reais, de landing pages a um sistema web."
         className="max-w-3xl font-display text-4xl font-semibold leading-[1.05] tracking-tight sm:text-6xl"
       />
       <Reveal>
         <p className="mt-6 max-w-xl text-lg text-mute">
-          Cada projeto é um site real, no ar. Abra qualquer um para ver como ele funciona.
+          Cada projeto está no ar. Abra qualquer um para ver como funciona.
         </p>
       </Reveal>
 

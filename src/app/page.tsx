@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
+import CtaBand from "@/components/CtaBand";
 import Services from "@/components/Services";
 import Process from "@/components/Process";
 import About from "@/components/About";
@@ -21,6 +22,7 @@ export default function Home() {
       <main id="conteudo">
         <Hero />
         <Projects />
+        <CtaBand />
         <Services />
         <Process />
         <About />

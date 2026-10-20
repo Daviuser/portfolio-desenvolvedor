@@ -53,7 +53,7 @@ function Chip({ children, pos, depth, delay }: { children: React.ReactNode; pos:
     >
       <div
         style={{ "--d": `${delay}ms` } as CSSProperties}
-        className="fade-in flex items-center gap-2 rounded-full border border-line bg-ink/85 px-3.5 py-2 text-xs backdrop-blur"
+        className="fade-in flex items-center gap-2 rounded-full border border-line bg-ink px-3.5 py-2 text-xs"
       >
         {children}
       </div>
@@ -83,7 +83,7 @@ export default function HeroVisual() {
       onPointerLeave={onLeave}
       className="relative mx-auto aspect-[5/4] w-full max-w-xl"
       role="img"
-      aria-label="Composição com capturas de tela de projetos publicados"
+      aria-label="Composição com capturas de tela de sites e sistemas desenvolvidos"
     >
       <Frame slug="catalina-reyes" pos="right-0 top-0 z-0 w-[66%]" tilt="rotate-[4deg]" depth={-14} delay={650} />
       <Frame slug="brain-and-body" pos="bottom-0 left-0 z-0 w-[66%]" tilt="-rotate-[5deg]" depth={-8} delay={800} />
@@ -94,7 +94,7 @@ export default function HeroVisual() {
       </Chip>
       <Chip pos="bottom-[8%] right-0" depth={22} delay={1400}>
         <Layers size={14} className="text-lime" aria-hidden />
-        {projects.length} projetos publicados
+        Feito sob medida
       </Chip>
     </div>
   );

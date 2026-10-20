@@ -26,7 +26,7 @@ export default function Footer() {
             {site.name}
             <span className="text-lime">.</span>
           </a>
-          <p className="mt-3 max-w-xs text-mute">{site.role} independente. Sites, landing pages e aplicações web sob medida.</p>
+          <p className="mt-3 max-w-xs text-mute">{site.role}. Sites, landing pages e aplicações web sob medida.</p>
         </div>
         <nav aria-label="Rodapé">
           <ul className="space-y-2.5 text-mute">

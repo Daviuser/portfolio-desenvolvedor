@@ -8,7 +8,7 @@ export default function About() {
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
         <div>
           <RevealText
-            text="Desenvolvimento independente, do design à entrega."
+            text="Design, funcionalidade e atenção a cada detalhe."
             className="max-w-xl font-display text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl"
           />
           <Reveal>

@@ -46,7 +46,7 @@ export default function Header() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        scrolled || open ? "border-b border-line bg-ink/85 backdrop-blur-md" : "border-b border-transparent"
+        scrolled || open ? "border-b border-line bg-ink/95" : "border-b border-transparent"
       }`}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
@@ -83,7 +83,7 @@ export default function Header() {
             className="hidden min-h-10 items-center gap-2 rounded-full bg-lime px-4 text-sm font-medium text-ink transition hover:bg-white active:scale-[.97] md:inline-flex"
           >
             <MessageCircle size={16} aria-hidden />
-            Pedir orçamento
+            Vamos conversar
           </a>
         )}
 
@@ -117,7 +117,7 @@ export default function Header() {
           {whatsappUrl && (
             <li>
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="block border-t border-line py-4 font-display text-xl text-lime">
-                Pedir orçamento
+                Vamos conversar
               </a>
             </li>
           )}
