@@ -6,14 +6,16 @@ import { site, whatsappUrl } from "@/data/site";
 
 const links = [
   { href: "#projetos", label: "Projetos" },
+  { href: "#servicos", label: "Serviços" },
+  { href: "#processo", label: "Processo" },
   { href: "#sobre", label: "Sobre" },
-  { href: "#tecnologias", label: "Tecnologias" },
   { href: "#contato", label: "Contato" },
 ];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [active, setActive] = useState("");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
@@ -21,9 +23,23 @@ export default function Header() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("keydown", onKey);
+
+    const io = new IntersectionObserver(
+      (entries) =>
+        entries.forEach((e) => {
+          if (e.isIntersecting) setActive(e.target.id === "inicio" ? "" : `#${e.target.id}`);
+        }),
+      { rootMargin: "-45% 0px -50% 0px" },
+    );
+    ["inicio", ...links.map((l) => l.href.slice(1)), "tecnologias"].forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) io.observe(el);
+    });
+
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("keydown", onKey);
+      io.disconnect();
     };
   }, []);
 
@@ -40,11 +56,23 @@ export default function Header() {
         </a>
 
         <nav aria-label="Principal" className="hidden items-center gap-1 md:flex">
-          {links.map((l) => (
-            <a key={l.href} href={l.href} className="rounded-full px-4 py-2 text-sm text-mute transition-colors hover:text-white">
-              {l.label}
-            </a>
-          ))}
+          {links.map((l) => {
+            const on = active === l.href;
+            return (
+              <a
+                key={l.href}
+                href={l.href}
+                aria-current={on ? "true" : undefined}
+                className={`relative rounded-full px-4 py-2 text-sm transition-colors hover:text-white ${on ? "text-white" : "text-mute"}`}
+              >
+                {l.label}
+                <span
+                  aria-hidden
+                  className={`absolute inset-x-4 bottom-0.5 h-px origin-left bg-lime transition-transform duration-300 ${on ? "scale-x-100" : "scale-x-0"}`}
+                />
+              </a>
+            );
+          })}
         </nav>
 
         {whatsappUrl && (
@@ -55,7 +83,7 @@ export default function Header() {
             className="hidden min-h-10 items-center gap-2 rounded-full bg-lime px-4 text-sm font-medium text-ink transition hover:bg-white active:scale-[.97] md:inline-flex"
           >
             <MessageCircle size={16} aria-hidden />
-            WhatsApp
+            Pedir orçamento
           </a>
         )}
 
@@ -89,7 +117,7 @@ export default function Header() {
           {whatsappUrl && (
             <li>
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="block border-t border-line py-4 font-display text-xl text-lime">
-                WhatsApp
+                Pedir orçamento
               </a>
             </li>
           )}

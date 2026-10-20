@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="pt-BR" className={`${display.variable} ${body.variable}`}>
       <body className="font-sans">
         <noscript>
-          <style>{`.reveal{opacity:1!important;transform:none!important}.word>span,.fade-in{animation:none!important}`}</style>
+          <style>{`.reveal{opacity:1!important;transform:none!important}.word>span,.fade-in{animation:none!important}.rt .w>span{transform:none!important}`}</style>
         </noscript>
         {children}
       </body>

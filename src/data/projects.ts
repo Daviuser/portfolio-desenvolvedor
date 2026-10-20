@@ -2,6 +2,7 @@
 // public/images/projects/ e ajuste os campos. Nenhum componente precisa mudar.
 export type Project = {
   slug: string;
+  highlight?: string; // destaque da solução, só com o que dá para confirmar no site
   name: string;
   category: string;
   description: string;
@@ -16,6 +17,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "klivo",
+    highlight: "Interface de acesso com identidade própria e painel dos módulos que o sistema propõe.",
     name: "Klivo — Sistema de gestão para clínicas odontológicas",
     category: "Aplicação web / SaaS odontológico",
     description:
@@ -29,6 +31,7 @@ export const projects: Project[] = [
   },
   {
     slug: "brain-and-body",
+    highlight: "Navegação por seções e botão flutuante de WhatsApp sempre à vista.",
     name: "Brain and Body Consultoria",
     category: "Landing page comercial, treino personalizado",
     description:
@@ -40,6 +43,7 @@ export const projects: Project[] = [
   },
   {
     slug: "ana-caroline",
+    highlight: "Botões de contato por WhatsApp e Instagram logo na primeira tela.",
     name: "Ana Caroline",
     category: "Landing page profissional, psicologia",
     description:
@@ -51,6 +55,7 @@ export const projects: Project[] = [
   },
   {
     slug: "patricia-buchhorn",
+    highlight: "Botão de agendamento fixo no menu e identificação profissional em destaque.",
     name: "Patrícia Buchhorn",
     category: "Landing page, psicologia clínica",
     description:
@@ -62,6 +67,7 @@ export const projects: Project[] = [
   },
   {
     slug: "espaco-psique",
+    highlight: "Identidade visual construída a partir da logo, com botão de agendamento no menu.",
     name: "Espaço Psique Psicologia",
     category: "Site institucional, psicologia",
     description:
@@ -73,6 +79,7 @@ export const projects: Project[] = [
   },
   {
     slug: "catalina-reyes",
+    highlight: "Seções de tratamentos e trabalho, com botão de agendamento no menu.",
     name: "Dra. Catalina Reyes",
     category: "Landing page odontológica",
     description:

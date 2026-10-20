@@ -1,18 +1,24 @@
 import Reveal from "./Reveal";
+import RevealText from "./RevealText";
 import { site } from "@/data/site";
 
 export default function About() {
   return (
     <section id="sobre" className="border-t border-line">
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-24 sm:px-8 lg:grid-cols-2">
-        <Reveal>
-          <h2 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl">Sobre mim</h2>
-          <div className="mt-8 max-w-xl space-y-5 text-lg leading-relaxed text-mute">
-            {site.about.map((t) => (
-              <p key={t}>{t}</p>
-            ))}
-          </div>
-        </Reveal>
+      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
+        <div>
+          <RevealText
+            text="Desenvolvimento independente, do design à entrega."
+            className="max-w-xl font-display text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl"
+          />
+          <Reveal>
+            <div className="mt-8 max-w-xl space-y-5 text-lg leading-relaxed text-mute">
+              {site.about.map((t) => (
+                <p key={t}>{t}</p>
+              ))}
+            </div>
+          </Reveal>
+        </div>
         <Reveal delay={120}>
           <ul className="divide-y divide-line rounded-2xl border border-line bg-panel">
             {site.values.map((v) => (

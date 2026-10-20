@@ -15,10 +15,10 @@ export default function Contact() {
       <Reveal>
         <div className="rounded-3xl bg-lime p-8 text-ink sm:p-14">
           <h2 className="max-w-2xl font-display text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">
-            Vamos tirar o seu projeto do papel?
+            Tem uma ideia ou um projeto em mente? Vamos conversar.
           </h2>
           <p className="mt-5 max-w-lg text-lg text-ink/75">
-            Conte o que você precisa e eu respondo com os próximos passos.
+            Explique o que você precisa e peça um orçamento. Sem compromisso: a primeira conversa serve para entender o seu cenário.
           </p>
           {channels.length > 0 ? (
             <ul className="mt-10 flex flex-wrap gap-3">
