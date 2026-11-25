@@ -1,0 +1,7 @@
+import { Check, CircleDollarSign } from "lucide-react";
+import { whatsappUrl } from "@/data/site";
+import Reveal from "./Reveal";
+
+export default function Payment() {
+  return <section className="payment-section"><div className="section-container"><Reveal><div className="payment-panel"><div className="payment-copy"><p className="eyebrow"><span className="eyebrow-line" /> Transparência em cada projeto</p><h2>Pagamento único.<br /><em>Sem mensalidades pelo desenvolvimento.</em></h2><p>Invista no desenvolvimento da sua solução digital sem ficar preso a mensalidades pelo serviço de criação. Você realiza o pagamento acordado pelo projeto e recebe uma solução construída para as necessidades do seu negócio.</p><p className="payment-footnote">Hospedagem, domínio, serviços externos e eventuais manutenções podem ter custos próprios, definidos conforme cada projeto.</p><a className="button button-gold" href={whatsappUrl} target="_blank" rel="noopener noreferrer">Conversar sobre meu projeto <CircleDollarSign size={17} aria-hidden /></a></div><div className="payment-points"><div className="payment-symbol" aria-hidden="true">V</div><p className="payment-points-title">Mais clareza para decidir.</p><ul><li><Check size={17} aria-hidden /> Escopo definido com você</li><li><Check size={17} aria-hidden /> Investimento combinado antes de iniciar</li><li><Check size={17} aria-hidden /> Liberdade e controle sobre seu projeto</li></ul></div></div></Reveal></div></section>;
+}

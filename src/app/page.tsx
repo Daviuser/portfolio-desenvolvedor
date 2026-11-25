@@ -1,11 +1,10 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Projects from "@/components/Projects";
-import CtaBand from "@/components/CtaBand";
+import Benefits from "@/components/Benefits";
 import Services from "@/components/Services";
+import Payment from "@/components/Payment";
 import Process from "@/components/Process";
 import About from "@/components/About";
-import Tech from "@/components/Tech";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -14,19 +13,18 @@ export default function Home() {
     <>
       <a
         href="#conteudo"
-        className="sr-only z-[60] rounded bg-lime px-4 py-2 text-ink focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+        className="skip-link"
       >
         Pular para o conteúdo
       </a>
       <Header />
       <main id="conteudo">
         <Hero />
-        <Projects />
-        <CtaBand />
+        <Benefits />
         <Services />
+        <Payment />
         <Process />
         <About />
-        <Tech />
         <Contact />
       </main>
       <Footer />

@@ -1,34 +1,26 @@
+import { ArrowUpRight, Compass, Fingerprint, Workflow } from "lucide-react";
 import Reveal from "./Reveal";
 import RevealText from "./RevealText";
 import { site } from "@/data/site";
 
+const pillars = [
+  { icon: Compass, title: "Estratégia", text: "Cada projeto parte dos objetivos e da realidade do seu negócio." },
+  { icon: Fingerprint, title: "Identidade", text: "Uma experiência digital alinhada à essência da sua marca." },
+  { icon: Workflow, title: "Tecnologia", text: "Soluções úteis, construídas para trabalhar com você." },
+];
+
 export default function About() {
   return (
-    <section id="sobre" className="border-t border-line">
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
+    <section id="sobre" className="commitment-section">
+      <div className="section-container commitment-grid">
         <div>
-          <RevealText
-            text="Design, funcionalidade e atenção a cada detalhe."
-            className="max-w-xl font-display text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl"
-          />
-          <Reveal>
-            <div className="mt-8 max-w-xl space-y-5 text-lg leading-relaxed text-mute">
-              {site.about.map((t) => (
-                <p key={t}>{t}</p>
-              ))}
-            </div>
-          </Reveal>
+          <Reveal><p className="eyebrow"><span className="eyebrow-line" /> Nosso compromisso</p></Reveal>
+          <RevealText text="Não desenvolvemos apenas sites. Criamos ferramentas para impulsionar negócios." className="commitment-title" />
+          <Reveal><p className="commitment-copy">{site.about}</p></Reveal>
         </div>
-        <Reveal delay={120}>
-          <ul className="divide-y divide-line rounded-2xl border border-line bg-panel">
-            {site.values.map((v) => (
-              <li key={v.title} className="p-6">
-                <h3 className="font-display text-xl font-semibold">{v.title}</h3>
-                <p className="mt-1 text-mute">{v.text}</p>
-              </li>
-            ))}
-          </ul>
-        </Reveal>
+        <div className="pillar-list">
+          {pillars.map(({ icon: Icon, title, text }, i) => <Reveal key={title} delay={i * 80}><div className="pillar-item"><span className="pillar-icon"><Icon size={19} aria-hidden /></span><div><h3>{title}</h3><p>{text}</p></div><ArrowUpRight size={16} className="pillar-arrow" aria-hidden /></div></Reveal>)}
+        </div>
       </div>
     </section>
   );
